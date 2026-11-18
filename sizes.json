@@ -1,0 +1,64 @@
+{
+  "lastVerified": "2026-11-16",
+  "note": "Each value is marked 'documented' (stated by the platform) or 'convention' (common practice, not an official requirement).",
+  "platforms": {
+    "youtube_video": {
+      "recommended": { "width": 3840, "height": 2160, "status": "documented" },
+      "minimumWidth": { "value": 640, "status": "documented" },
+      "aspectRatio": "16:9",
+      "formats": ["JPG", "PNG"],
+      "maxFileSize": { "mobile": "2 MB", "computer": "50 MB", "status": "documented" },
+      "generatedSizes": [
+        { "name": "default", "width": 120, "height": 90 },
+        { "name": "mqdefault", "width": 320, "height": 180 },
+        { "name": "hqdefault", "width": 480, "height": 360 },
+        { "name": "sddefault", "width": 640, "height": 480, "note": "not available for every video" },
+        { "name": "maxresdefault", "width": 1280, "height": 720, "note": "not available for every video" }
+      ],
+      "sources": [
+        "https://support.google.com/youtube/answer/72431",
+        "https://developers.google.com/youtube/v3/docs/thumbnails"
+      ]
+    },
+    "youtube_shorts": {
+      "recommended": { "width": 2160, "height": 3840, "status": "documented" },
+      "minimumHeight": { "value": 640, "status": "documented" },
+      "aspectRatio": "9:16",
+      "formats": ["JPG", "PNG"],
+      "note": "Custom Shorts thumbnails can be added in YouTube Studio on a computer.",
+      "sources": ["https://support.google.com/youtube/answer/72431"]
+    },
+    "tiktok_cover": {
+      "aspectRatio": "9:16",
+      "source": "A frame selected from the video before posting",
+      "workingSize": { "width": 1080, "height": 1920, "status": "convention" },
+      "minimumVideo": { "width": 540, "height": 960, "status": "documented for ads" },
+      "officialImageSpec": false,
+      "profileGrid": "Top and bottom are trimmed; exact crop is not documented",
+      "sources": [
+        "https://www.tiktok.com/support/faq_detail?id=7636670084584479253&category=web_account",
+        "https://ads.tiktok.com/help/article/video-ads-specifications?lang=en"
+      ]
+    },
+    "instagram_reels_cover": {
+      "aspectRatio": "9:16",
+      "workingSize": { "width": 1080, "height": 1920, "status": "convention" },
+      "helpCenterCover": { "width": 420, "height": 654, "ratio": "1:1.55", "status": "documented" },
+      "apiCover": { "ratio": "9:16", "format": "JPEG", "maxFileSize": "8 MB", "status": "documented" },
+      "feedCrop": { "ratio": "1:1", "status": "documented" },
+      "profileGridTile": { "ratio": "3:4", "status": "reported, not documented" },
+      "sources": [
+        "https://help.instagram.com/1038071743007909",
+        "https://developers.facebook.com/docs/instagram-platform/instagram-graph-api/reference/ig-user/media"
+      ]
+    },
+    "facebook_video_and_reels": {
+      "reels": { "ratio": "9:16", "recommended": { "width": 1080, "height": 1920 }, "minimum": { "width": 540, "height": 960 }, "status": "documented" },
+      "thumbnail": { "maxFileSize": "10 MB", "aspectRatio": "same as the video", "status": "documented" },
+      "sources": [
+        "https://developers.facebook.com/docs/video-api/guides/reels-publishing/",
+        "https://developers.facebook.com/docs/graph-api/reference/video/thumbnails/"
+      ]
+    }
+  }
+}
